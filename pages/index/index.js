@@ -1,54 +1,77 @@
+var amapFile = require('../../libs/amap-wx.js');
 //index.js
 //获取应用实例
 const app = getApp()
 
+var markersData = {
+  iconPath: "../../images/icon-marker-active.png",
+  id: 0,
+  latitude: 40.002607,
+  longitude: 116.487847,
+  width: 15,
+  height: 25
+}
+
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    markers: [],
+    latitude: '',
+    longitude: '',
+    textData: {}
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
+  makertap: function (e) {
+    var id = e.markerId;
+    var that = this;
+    that.showMarkerInfo(markersData, id);
+    that.changeMarkerColor(markersData, id);
   },
   onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
+    var that = this;
+    var myAmapFun = new amapFile.AMapWX({ key: 'a374f6fbba1016da4bf389864ed1509b'});
+    myAmapFun.getPoiAround({
+      iconPathSelected: '../../images/icon-marker-active.png', //如：..­/..­/img/marker_checked.png
+      iconPath: '../../images/icon-marker.png', //如：..­/..­/img/marker.png
+      success: function (data) {
+        markersData = data.markers;
+        that.setData({
+          markers: markersData
+        });
+        that.setData({
+          latitude: markersData[0].latitude
+        });
+        that.setData({
+          longitude: markersData[0].longitude
+        });
+        that.showMarkerInfo(markersData, 0);
+      },
+      fail: function (info) {
+        wx.showModal({ title: info.errMsg })
       }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
     })
+  },
+  showMarkerInfo: function (data, i) {
+    var that = this;
+    that.setData({
+      textData: {
+        name: data[i].name,
+        desc: data[i].address
+      }
+    });
+  },
+  changeMarkerColor: function (data, i) {
+    var that = this;
+    var markers = [];
+    for (var j = 0; j < data.length; j++) {
+      if (j == i) {
+        data[j].iconPath = "../../images/icon-marker-active.png"; //如：..­/..­/img/marker_checked.png
+      } else {
+        data[j].iconPath = "../../images/icon-marker.png"; //如：..­/..­/img/marker.png
+      }
+      markers.push(data[j]);
+    }
+    that.setData({
+      markers: markers
+    });
   }
+
 })
