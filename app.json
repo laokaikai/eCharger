@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/community/community",
+    "pages/me/me",
+    "pages/service/service"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f3f3f3",
+    "navigationBarTitleText": "e充电",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#CBCBCB",
+    "selectedColor": "#338867",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "充电",
+        "iconPath": "images/icon-charger.png",
+        "selectedIconPath": "images/icon-charger-active.png"
+      },
+      {
+        "pagePath": "pages/community/community",
+        "text": "社区",
+        "iconPath": "images/icon-community.png",
+        "selectedIconPath": "images/icon-community-active.png"
+      },
+      {
+        "pagePath": "pages/service/service",
+        "text": "服务",
+        "iconPath": "images/icon-service.png",
+        "selectedIconPath": "images/icon-service-active.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "images/icon-me.png",
+        "selectedIconPath": "images/icon-me-active.png"
+      }
+    ]
+  }
+}
