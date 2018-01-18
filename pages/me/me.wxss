@@ -1,1 +1,263 @@
 /* pages/me/me.wxss */
+
+/*@import 'stylesheet.wxss';*/
+@import 'stylesheet.wxss';
+
+.list-top {
+  margin-top: 24rpx;
+}
+
+.list-down {
+  margin-bottom: 24rpx;
+}
+
+.bd1 {
+  border-bottom: 1px #f4f4f8 solid;
+}
+
+.bd2 {
+  border-bottom: 2px #f4f4f8 solid;
+}
+
+.icon {
+  font-family: 'iconfont';
+}
+
+.back {
+  background-color: white;
+  padding: 0 20rpx;
+}
+
+.item {
+  background-color: white;
+  padding: 0 20rpx;
+}
+
+.item-left {
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: white;
+  padding: 0 0 0 20rpx;
+}
+
+.item text {
+  font-size: 28rpx;
+}
+
+.mine-login {
+  display: flex;
+  height: 116rpx;
+  padding: 32rpx;
+}
+
+.head-img::before {
+  content: '\e61e';
+  color: #e6e6e6;
+  font-size: 116rpx;
+}
+
+.mine-login .login-register {
+  font-weight: bold;
+  font-size: 34rpx;
+  margin-left: 30rpx;
+  line-height: 116rpx;
+  flex-grow: 4;
+  text-align: left;
+}
+
+.link-point {
+  flex-shrink: 2;
+}
+
+.link-point::before {
+  content: '\e600';
+  color: #e6e6e6;
+  font-size: 30rpx;
+  line-height: 116rpx;
+  font-weight: bold;
+}
+
+.balance {
+  display: flex;
+  align-content: center;
+  padding: 0rpx 5rpx;
+  height: 80rpx;
+}
+
+.mine-balance-icon {
+  flex: 2;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+
+.mine-balance-icon::before {
+  content: '\e70e';
+  color: #fec351;
+  font-size: 40rpx;
+  line-height: 80rpx;
+  flex: 0 2;
+}
+
+.balance-point {
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+
+.mine-order-icon {
+  flex: 2;
+  font-size: 30rpx;
+  line-height: 80rpx;
+}
+
+.mine-order-icon::before {
+  content: '\e602';
+  color: #3c98fa;
+  font-size: 40rpx;
+  line-height: 80rpx;
+  flex: 0 2;
+}
+
+.mine-order {
+  flex: 3 1;
+}
+
+.item-icon {
+  font-size: 40rpx;
+  line-height: 80rpx;
+}
+
+.item-text {
+  font-size: 28rpx;
+  line-height: 80rpx;
+}
+
+.comment::before {
+  content: '\e644';
+  color: #3c98fa;
+}
+
+.store::before {
+  content: '\e657';
+  color: #3c98fa;
+}
+
+.ziliao::before {
+  content: '\e601';
+  color: #3c98fa;
+}
+
+.account-safe::before {
+  content: '\e67a';
+  color: #3c98fa;
+}
+
+.setting::before {
+  content: '\e686';
+  color: #3c98fa;
+}
+
+.about-us::before {
+  content: '\e734';
+  color: #3c98fa;
+}
+
+/*-------------------------------------------------------*/
+
+page {
+  height: 100%;
+}
+
+.container {
+  font-size: 30rpx;
+}
+
+.mine-head {
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  background-color: #f4f4f8;
+  font-size: 30rpx;
+}
+
+.order {
+  text-align: left;
+  height: 78rpx;
+  line-height: 78rpx;
+}
+
+.orderText {
+  height: 100%;
+  border-bottom: 1rpx solid silver;
+}
+
+.orderText text {
+  float: right;
+}
+
+.mine-icon {
+  width: 100%;
+  display: flex;
+  padding: 38rpx 0;
+  margin-bottom: 20rpx;
+}
+
+.mine-icon view {
+  flex: 1;
+}
+
+.mine-icon .fa {
+  width: 100%;
+}
+
+.mine-icon view text {
+  display: inline-block;
+  padding: 15rpx 0;
+}
+
+.flex-item {
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: left;
+  box-sizing: border-box;
+}
+
+.mylist {
+  margin-bottom: 2rpx;
+}
+
+.fa-angle-right {
+  float: right;
+  margin-right: 0;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.footbar {
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f4f4f8;
+}
+
+.footbar text {
+  flex: 1;
+  text-align: center;
+}
+
+.copyright {
+  display: flex;
+}
+
+.copyright .line {
+  flex: 1;
+  height: 2rpx;
+  background-color: #f4f4f8;
+  margin-top: 22rpx;
+}
+
+.copyright .center {
+  flex: 0 0 500rpx;
+  font-size: 26rpx;
+  border: none;
+  margin-top: 12rpx;
+}

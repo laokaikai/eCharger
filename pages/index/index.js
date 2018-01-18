@@ -1,6 +1,4 @@
 var amapFile = require('../../libs/amap-wx.js');
-//index.js
-//获取应用实例
 const app = getApp()
 
 var markersData = {
@@ -27,7 +25,7 @@ Page({
   },
   onLoad: function () {
     var that = this;
-    var myAmapFun = new amapFile.AMapWX({ key: 'a374f6fbba1016da4bf389864ed1509b'});
+    var myAmapFun = new amapFile.AMapWX({ key: 'a374f6fbba1016da4bf389864ed1509b' });
     myAmapFun.getPoiAround({
       iconPathSelected: '../../images/icon-marker-active.png', //如：..­/..­/img/marker_checked.png
       iconPath: '../../images/icon-marker.png', //如：..­/..­/img/marker.png

@@ -1,4 +1,5 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
@@ -7,4 +8,66 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
+
+.txt-left {
+  text-align: left;
+}
+
+/****布局****/
+
+.grid {
+  display: flex;
+}
+
+.grid-cell {
+  flex: 1;
+}
+
+.grid-cell.c-1 {
+  flex: 0 0 8.333333333333333%;
+}
+
+.grid-cell.c-2 {
+  flex: 0 0 16.66666666666667;
+}
+
+.grid-cell.c-3 {
+  flex: 0 0 25%;
+}
+
+.grid-cell.c-4 {
+  flex: 0 0 33.33333333333333%;
+}
+
+.grid-cell.c-5 {
+  flex: 0 0 41.66666666666667%;
+}
+
+.grid-cell.c-6 {
+  flex: 0 0 50%;
+}
+
+.grid-cell.c-7 {
+  flex: 0 0 58.33333333333333%;
+}
+
+.grid-cell.c-8 {
+  flex: 0 0 66.66666666666667%;
+}
+
+.grid-cell.c-9 {
+  flex: 0 0 75%;
+}
+
+.grid-cell.c-10 {
+  flex: 0 0 83.33333333333333%;
+}
+
+.grid-cell.c-11 {
+  flex: 0 0 91.66666666666667%;
+}
+
+.grid-cell.c-12 {
+  flex: 0 0 100%;
+}
